@@ -7,7 +7,7 @@ use Styde\Unit;
 
 class CrossBow extends Bow
 {
-    protected $damage = 40;
+    protected $damage = 20;
 
     public function getDescription(Unit $attacker, Unit $opponent)
     {

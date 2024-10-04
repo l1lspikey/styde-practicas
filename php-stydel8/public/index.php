@@ -1,9 +1,10 @@
 <?php
-// use Styde\BasicArmor;
-// use Styde\HeavyArmor;
-// use Styde\Soldier;
-// use Styde\Archer;
 namespace Styde;
+use Styde\BasicArmor;
+use Styde\HeavyArmor;
+use Styde\Soldier;
+use Styde\Archer;
+
 
 use Styde\Weapons\BasicBow;
 use Styde\Weapons\BasicSword;
@@ -13,20 +14,20 @@ require '../vendor/autoload.php';
 
 
 // Ejemplo de uso
-$basicArmor = new Armors\BasicArmor(); // Armadura básica // Styde\BasicArmor != Styde\Armors\BasicArmor
-$heavyArmor = new Armors\HeavyArmor(); // Armadura pesada
+$basicArmor = new Armors\BasicArmor(); 
+$heavyArmor = new Armors\HeavyArmor(); 
 
 $ramm = new Soldier('Ramm', new BasicSword); // Crear soldado
-$spikey = new Archer('Spikey', new BasicBow); // Crear arquero
+$spikey = new Archer('Spikey', new BasicBow); 
 
-// Asignar armadura a Ramm
+// Asignar armadura
 $spikey->setArmor($heavyArmor);
 
 
 $spikey->attack($ramm); 
 $ramm->attack($spikey); 
 
-// Cambiar la armadura de Ramm a pesada
+
 $ramm->setArmor($heavyArmor);
-$spikey->attack($ramm); // Spikey ataca a Ramm nuevamente
-?>
+
+$spikey->attack($ramm); 
